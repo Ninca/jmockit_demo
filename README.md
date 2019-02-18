@@ -26,3 +26,8 @@ When just the tests fail try to add the following to the build.gradle:
     test {
         jvmArgs "-javaagent:${classpath.find { it.name.contains("jmockit") }.absolutePath}"
     }
+
+With a standard Gradle setup like in this project you can also try to run tests with the Gradle runner. 
+To do so, change the IntelliJ settings: 
+Under File | Settings | Build, Execution, Deployment | Build Tools | Gradle | Runner select "Let me choose per test".
+With a more complex setup this does not work.
